@@ -4,32 +4,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register</title>
+        <link rel="stylesheet" href="registerStyle.css">
     </head>
     <body>
+    <div class="formBox">
         <form method="post" action="registration.jsp">
-            <table align = "center" border="0" width="0%" cellpadding="2">
-               <thead>
-                   <tr>
-                       <th colspan="2">Enter your information here</th>
-                   </tr>
-               </thead>
-               <tbody>
-                   <tr>
-                       <td>Full Name</td>
-                       <td><input type="text" pattern="[a-zA-Z\s]+" title = "Only letters allowed" name="name" value="" required/></td>
-                   </tr>
-                   <tr>
-                       <td>Username</td>
-                       <td><input type="text" pattern="[a-zA-Z0-9]+" title = "Only alphanumeric characters allowed" name="username" value="" required/></td>
-                   </tr>
-                   <tr>
-                       <td>Password</td>
-                       <td><input type="password" name="password" value="" required/></td>
-                   </tr>
-                   <tr>
-                       <td>State</td>
-                       <td>
-                      	 <select  name="state" size="1" required>
+        				<h4>REGISTER</h4>
+                       <h3>Enter your information here</h3>
+                       <p>Full Name</p>
+                       <input type="text" pattern="[a-zA-Z\s]+" title = "Only letters allowed" name="name" value="" required/>
+                       <p>Username</p>
+                       <input type="text" pattern="[a-zA-Z0-9]+" title = "Only alphanumeric characters allowed" name="username" value="" required/>
+                       <p>Password</p>
+                       <input type="password" name="password" value="" required/>
+                       <p>State</p>
+                       <select  name="state" size="1" required>
                       	 	<option value="">Select State </option>
 							<option value="Alabama">Alabama</option>
 				      		<option value="Alaska">Alaska</option>
@@ -82,24 +71,13 @@
 							<option value="Wisconsin">Wisconsin</option>
 							<option value="Wyoming">Wyoming</option>
 						</select>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>Estimated Gross Salary</td>
-                       <td><input type="number" name="salary" onfocus="this.value=''" value="" required/></td>
-                   </tr>
-                   <tr>
-                       <td>Estimated Annual Expenses</td>
-                       <td><input type="number" name="expenses" onfocus="this.value=''" value="" required/></td>
-                   </tr>
-                   <tr>
-                       <td><input type="submit" value="Submit" /></td>
-                   </tr>
-                   <tr>
-                       <td colspan="2">If you are already registered, please <a href="index.jsp">Login Here</a></td>
-                   </tr>
-               </tbody>
-           </table>
+                       <p>Estimated Gross Salary</p>
+                       <input type="number" name="salary" onfocus="this.value=''" value="" required/>
+                       <p>Estimated Annual Expenses</p>
+                       <input type="number" name="expenses" onfocus="this.value=''" value="" required/>
+                       <input type="submit" value="Submit" />
+                       <a href="index.jsp">Have an account? Login Here</a>
         </form>
+        </div>
     </body>
 </html>
