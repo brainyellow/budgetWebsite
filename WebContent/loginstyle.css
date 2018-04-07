@@ -15,7 +15,17 @@ h3
 	font-size: 18pt;
 	margin: 0;
 	text-align: center;
-	padding: 30px 0 20px 0;
+	padding: 10px 0 30px 0;
+}
+
+h4 
+{
+	color: #cccccc;
+	font-family: helvetica;
+	font-size: 12pt;
+	margin: 0;
+	text-align: center;
+	padding: 0px 0 5px 0;
 }
 
 .formBox
@@ -30,6 +40,7 @@ h3
 	transform: translate(-50%,-50%);
 	box-sizing: border-box;
 	padding: 25px;
+	border-radius: 10px;
 }
 
 .formBox p
@@ -53,16 +64,18 @@ h3
 	outline: none;
 	height: 18px;
 	font-size: 14px;
-	color: #aaaaaa;
+	color: #cecece;
 }
 
 .formBox input[type="submit"]
 {
 	height: 40px;
-	background: #609dff;
+	background: #38acff;
 	color: #ffffff;
 	border: none;
+	box-shadow: 0 3px 8px #696969;
 	font-weight: bold;
+	border-radius: 5px;
 }
 
 .formBox a

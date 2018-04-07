@@ -9,6 +9,7 @@
     <body>
 				<div class="formBox">
 					<form method="post" action="login.jsp">
+						<h4>BUDGET PLANNER</h4>
                       	<h3>Sign In</h3>
                       	<p>Username</p>
                       	<input type="text" name="username" value="">
