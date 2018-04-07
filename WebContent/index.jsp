@@ -6,7 +6,7 @@
         <title>Budget Website</title>
     </head>
     <body>
-        <form method="post" action="login.jsp">
+        <form align = "center" method="post" action="login.jsp">
             <table border="0" class= "table-responsive">
               <thead>
                   <tr>
