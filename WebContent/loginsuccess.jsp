@@ -1,21 +1,49 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page import ="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Budget Website</title>	
 	</head>
 	<body style="font-family: helvetica;">
-		Welcome to Main Page, <%=session.getAttribute("username")%>
+	<%
+	Class.forName("com.mysql.jdbc.Driver");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://cs336-spr18.chigwigvjel3.us-east-2.rds.amazonaws.com:3306/IncomeTax", "maziz", "mark1995++");
+
+    String username = (String) session.getAttribute("username");
+    String name = null;
+    String state= null;
+    double salary = 0.0;
+    double rate = 0.0;
+    
+    Statement st = conn.createStatement();
+    ResultSet rs = st.executeQuery("SELECT name, state, salary from User where username='" + username + "';");
+    while(rs.next()){
+    	name = (String)rs.getString("name");
+    	state = (String)rs.getString("state");
+    	salary = (double)rs.getFloat("salary");
+    }
+    ResultSet rsrate = st.executeQuery("SELECT rate from TaxData where state='" + state + "';");
+    while(rsrate.next())
+    {
+    	rate = (double)rsrate.getFloat("rate");
+    }
+    
+    double eni = salary - (salary * rate);  
+    %>
+	
+		<form method="post" action="adjuster.jsp">
+		Welcome to Main Page, <%=name%>
 		<p align="right"><a href='logout.jsp'>Logout</a> </p>
 		
 		
 		<br/><br/><br/>
-		<div align = "center">
-			<h1>Salary and Tax Calculator</h1>
-			<h2>Estimated Net Income: </h2>
-			<h2>Current State: </h2>
-		</div>
-		<form method="post" action="adjuster.jsp">
+		
+		
+			<div align = "center">
+				<h1>Salary and Tax Calculator</h1>
+				<h2>Estimated Net Income: <%=eni%> </h2>
+				<h2>Current State: <%=state%> </h2>
+			</div>
             <table align = "center" border="0" width="0%" cellpadding="2">
                <thead>
                    <tr>
@@ -90,12 +118,10 @@
                        <td><input type="number" name="expenses" onfocus="this.value=''" value="" required/></td>
                    </tr>
                    	<td>
-                   	<td>
                    		<input type="submit" value="Submit" />
-                   	</td>
                    	</td>
                </tbody>
            </table>
-        </form>
+      	</form>
 	</body>
 </html>
