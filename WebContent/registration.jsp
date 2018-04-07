@@ -3,7 +3,7 @@
 <%
 
     Class.forName("com.mysql.jdbc.Driver");
-    Connection conn = DriverManager.getConnection("jdbc:mysql://cs336-spr18.chigwigvjel3.us-east-2.rds.amazonaws.com:3306/IncomeTax", "maziz", "mark1995++");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://budgetwebsite.cthtpprfbxoo.us-east-2.rds.amazonaws.com:3306/IncomeTax", "admin", "adminadmin");
     
     String username = request.getParameter("username");    
     String password = request.getParameter("password");

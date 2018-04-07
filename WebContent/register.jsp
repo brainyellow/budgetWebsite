@@ -7,7 +7,7 @@
     </head>
     <body>
         <form method="post" action="registration.jsp">
-            <table border="0" width="0%" cellpadding="2">
+            <table align = "center" border="0" width="0%" cellpadding="2">
                <thead>
                    <tr>
                        <th colspan="2">Enter your information here</th>
@@ -15,21 +15,22 @@
                </thead>
                <tbody>
                    <tr>
-                       <td>Name(first+last)</td>
-                       <td><input type="text" name="name" value="" /></td>
+                       <td>Full Name</td>
+                       <td><input type="text" pattern="[a-zA-Z\s]+" title = "Only letters allowed" name="name" value="" required/></td>
                    </tr>
                    <tr>
                        <td>Username</td>
-                       <td><input type="text" name="username" value="" /></td>
+                       <td><input type="text" pattern="[a-zA-Z0-9]+" title = "Only alphanumeric characters allowed" name="username" value="" required/></td>
                    </tr>
                    <tr>
                        <td>Password</td>
-                       <td><input type="password" name="password" value="" /></td>
+                       <td><input type="password" name="password" value="" required/></td>
                    </tr>
                    <tr>
                        <td>State</td>
                        <td>
-                      	 <select  name="state" size="1" >
+                      	 <select  name="state" size="1" required>
+                      	 	<option value="">Select State </option>
 							<option value="Alabama">Alabama</option>
 				      		<option value="Alaska">Alaska</option>
 							<option value="Alaska">Arizona</option>
@@ -85,11 +86,11 @@
                    </tr>
                    <tr>
                        <td>Estimated Gross Salary</td>
-                       <td><input type="number" name="salary" onfocus="this.value=''" value="" /></td>
+                       <td><input type="number" name="salary" onfocus="this.value=''" value="" required/></td>
                    </tr>
                    <tr>
                        <td>Estimated Annual Expenses</td>
-                       <td><input type="number" name="expenses" onfocus="this.value=''" value="" /></td>
+                       <td><input type="number" name="expenses" onfocus="this.value=''" value="" required/></td>
                    </tr>
                    <tr>
                        <td><input type="submit" value="Submit" /></td>
