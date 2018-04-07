@@ -1,0 +1,114 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+	font-color: #ffffff;
+	background: url(bbbb.jpg);
+}
+
+
+h3 
+{
+	color: #ffffff;
+	font-family: helvetica;
+	font-size: 14pt;
+	margin: 0;
+	text-align: center;
+	padding: 5px 0 30px 0;
+	font-weight: normal;
+}
+
+h4 
+{
+	color: #bfbfbf;
+	font-family: helvetica;
+	font-size: 12pt;
+	margin: 0;
+	text-align: center;
+	padding: 0px 0 0px 0;
+}
+
+.formBox
+{
+	margin: 0 auto;
+	width: 300px;
+	height: 700px;
+	background: rgba(0, 0, 0, .45);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 25px;
+	border-radius: 10px;
+}
+
+.formBox p
+{
+	color: #cecece;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.formBox input
+{
+	width: 100%;
+	margin-bottom: 20px
+}
+
+.smallBox
+{
+	margin: 0 auto;
+	width: 300px;
+	height: 200px;
+	background: rgba(0, 0, 0, .45);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 25px;
+	border-radius: 10px;
+}
+
+.smallBox a
+{
+	font-family: helvetica;
+	font-size: 14px;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	padding: 20px;
+}
+
+
+.formBox input[type="text"], input[type="password"], input[type="number"], input[type="submit"]
+{
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	background: transparent;
+	outline: none;
+	height: 18px;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.formBox input[type="submit"]
+{
+	height: 40px;
+	background: #38acff;
+	color: #ffffff;
+	border: none;
+	box-shadow: 0 3px 8px #696969;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+.formBox a
+{
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
