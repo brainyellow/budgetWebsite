@@ -1,4 +1,3 @@
-=======
 # Budgeting Website
 #### Project Proposal
 
