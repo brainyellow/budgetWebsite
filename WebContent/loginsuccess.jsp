@@ -1,4 +1,5 @@
-<%@ page import ="java.sql.*" %>
+<%@ page import ="java.sql.*"%>
+<%@ page import ="java.math.*"%>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -29,6 +30,9 @@
     }
     
     double eni = salary - (salary * rate);  
+    BigDecimal bd = new BigDecimal(Double.toString(eni));
+    bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);
+    eni = bd.doubleValue();
     %>
 	
 		<form method="post" action="adjuster.jsp">

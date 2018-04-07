@@ -8,7 +8,7 @@
 	<body>
 	<div class="smallBox">
 		<h3>Registration Successful</h3>
-		<a href='index.jsp'>Login Here</a>
+		<h4><a href='index.jsp'>Login Here</a></h4>
 		</div>	
 	</body>
 
