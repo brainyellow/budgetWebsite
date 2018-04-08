@@ -47,7 +47,7 @@
 			
 			<div align = "center">
 				<div class="main_info">
-					<h1>net income</h1>
+					<h1>Your Budget Information</h1>
 					<div class="whitespace"></div>
 					<h3>$<%=netIncome%></h3>
 					<h4>Estimated Annual Net Income</h4>
