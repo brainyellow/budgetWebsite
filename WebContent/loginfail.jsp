@@ -8,8 +8,9 @@
 	<body>
 	<div class="smallBox">
 	<br>
-		<h3 style = "font-size: 22pt; color: #ff0000; text-shadow: 2px 2px 2px #000000; opacity: 0.75">Login Failed</h3>
-		<h4><a style = "text-decoration: underline; font-size: 20pt; align = center; opacity: 0.75" href='index.jsp'>Try Again</a></h4>
+		<h3>Login Failed</h3>
+		<h5>Username or password incorrect</h5>
+		<h4><a href='index.jsp'>Try Again</a></h4>
 		</div>	
 	</body>
 </html>

@@ -41,17 +41,20 @@
     bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);		//rounds to two decimal places
     netIncome = bd.doubleValue();
     %>
+    
 	<div class="mainBox">
+	
 		<form method="post" action="adjuster.jsp">
 			<h4>Welcome, <%=name%></h4>
 			
 			<div align = "center">
+			
 				<div class="main_info">
 					<h1>Your Budget Information</h1>
 					<div class="whitespace"></div>
 					<h3>$<%=netIncome%></h3>
 					<h4>Estimated Annual Net Income</h4>
-					<br>
+					<div class="whitespace"></div>
 					
 					<h3>$<%=annualSavings%></h3>
 					<h4>Annual Savings</h4>
@@ -59,6 +62,7 @@
 					<h3><%=state%></h3>
 					<h4>Current State</h4>
 				</div>
+				
 			</div>
 			
 			<div class="h_line"></div>
