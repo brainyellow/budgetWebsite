@@ -22,4 +22,7 @@
     	//out.println("Login not successful! ");
     	response.sendRedirect("loginfail.jsp");
     }
+    if (con != null){
+    	con.close();
+    }
 %>

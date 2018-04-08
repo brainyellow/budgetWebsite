@@ -43,6 +43,9 @@
     bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);		//rounds to two decimal places
     netIncome = bd.doubleValue();
     annualSavings = ba.doubleValue();
+    if (conn != null){
+    	conn.close();
+    }
     %>
     
 	<div class="mainBox">
@@ -125,7 +128,7 @@
 							<option value="Wyoming">Wyoming</option>
 						</select>
                       	<p>Estimated Annual Salary</p>
-                      	<input type="number" min= "0" max= "2147483647" name="salary" onfocus="this.value=''" value="" required/>
+                      	<input type="number" min= "0" max= "9999999" name="salary" onfocus="this.value=''" value="" required/>
                        	<p>Estimated Annual Expenses</p>
                        	<input type="number" min= "0" name="expenses" onfocus="this.value=''" value="" required/>
                    		<input type="submit" value="Submit Changes"/>

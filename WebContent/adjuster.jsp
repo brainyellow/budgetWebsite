@@ -14,4 +14,7 @@
 	    stBudgetUpdate.executeUpdate("UPDATE Budget SET expenses =" + expenses + " WHERE username = '" + username + "';");
     	
 	    response.sendRedirect("loginsuccess.jsp");
+	    if (conn != null){
+	    	conn.close();
+	    }
     %>
