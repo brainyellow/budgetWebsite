@@ -72,9 +72,9 @@
 							<option value="Wyoming">Wyoming</option>
 						</select>
                        <p>Estimated Annual Gross Salary</p>
-                       <input type="number" name="salary" onfocus="this.value=''" value="" required/>
+                       <input type="number" min= "0"  max= "2147483647" name="salary" onfocus="this.value=''" value="" required/>
                        <p>Estimated Annual Expenses</p>
-                       <input type="number" name="expenses" onfocus="this.value=''" value="" required/>
+                       <input type="number" min= "0"  name="expenses" onfocus="this.value=''" value="" required/>
                        <input type="submit" value="Submit" />
                        <a href="index.jsp">Have an account? Login Here</a>
         </form>
