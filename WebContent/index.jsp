@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Budget Website</title>
-<link rel="stylesheet" href="loginstyle.css">
+<link rel="stylesheet" href="css/loginstyle.css">
 </head>
 <body>
 	<div class="formBox">

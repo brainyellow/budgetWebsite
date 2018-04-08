@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register</title>
-        <link rel="stylesheet" href="registerStyle.css">
+        <link rel="stylesheet" href="css/registerStyle.css">
     </head>
     <body>
     <div class="formBox">

@@ -4,7 +4,7 @@
 <html>
 	<head>
 		<title>Budget Website</title>	
-		<link rel="stylesheet" href="mainpageStyle.css">
+		<link rel="stylesheet" href="css/mainpageStyle.css">
 	</head>
 	<body style="font-family: helvetica;">
 	

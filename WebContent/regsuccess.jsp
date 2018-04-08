@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Login Success</title>
-<link rel="stylesheet" href="registerStyle.css">
+<link rel="stylesheet" href="css/registerStyle.css">
 </head>
 	<body>
 	<div class="smallBox">
