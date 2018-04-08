@@ -4,13 +4,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register</title>
-        <link rel="stylesheet" href="css/registerStyle.css">
+        <link rel="stylesheet" href="registerStyle.css">
     </head>
     <body>
     <div class="formBox">
         <form method="post" action="registration.jsp">
         				<h4>REGISTER</h4>
-                       <h3>Enter your information here</h3>
                        <p>Full Name</p>
                        <input type="text" pattern="[a-zA-Z\s]+" title = "Only letters allowed" name="name" value="" required/>
                        <p>Username</p>

@@ -27,7 +27,7 @@
 	        response.sendRedirect("index.jsp");
 	    }
 	}else{
-		out.println("This username already exists. Please choose a different one <a href='register.jsp'>try again</a>");
+		//out.println("This username already exists. Please choose a different one <a href='register.jsp'>try again</a>");
 		response.sendRedirect("regfail.jsp");
 	}
     

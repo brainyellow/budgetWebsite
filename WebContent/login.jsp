@@ -19,7 +19,7 @@
 		}
         
     } else {
-    	out.println("Login not successful! ");
+    	//out.println("Login not successful! ");
     	response.sendRedirect("loginfail.jsp");
     }
 %>
