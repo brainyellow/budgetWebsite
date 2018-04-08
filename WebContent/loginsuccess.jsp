@@ -102,7 +102,7 @@
 							<option value="New Jersey">New Jersey</option>
 							<option value="New Mexico">New Mexico</option>
 							<option value="New York">New York</option>
-							<option value="New York">North Carolina</option>
+							<option value="North Carolina">North Carolina</option>
 							<option value="North Dakota">North Dakota</option>
 							<option value="Ohio">Ohio</option>
 							<option value="Oklahoma">Oklahoma</option>

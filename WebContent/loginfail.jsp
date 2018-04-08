@@ -7,8 +7,7 @@
 </head>
 	<body>
 	<div class="smallBox">
-	<br>
-		<h3>Login Failed</h3>
+		<h3>LOGIN FAILED</h3>
 		<h5>Username or password incorrect</h5>
 		<h4><a href='index.jsp'>Try Again</a></h4>
 		</div>	

@@ -86,15 +86,13 @@ h4
 	margin: 50px auto;
 	width: 500px;
 	height: 780px;
-	background: rgba(0, 0, 0, .65);
+	background: rgba(0, 0, 0, .45);
 	top: 50%;
 	left: 50%;
-	position: absolute;
-	transform: translate(-50%,-50%);
+	float: center;
 	box-sizing: border-box;
-	padding: 25px;
 	border-radius: 10px;
-	padding-top: 25px;
+	padding: 20px;
 }
 
 .mainBox p
@@ -173,5 +171,9 @@ h4
 
 option
 {
-	background-color: #82caff;
+	background-color: rgba(255, 255, 255, .45);
+}
+
+a:hover { 
+    background-color: #cecece;
 }
