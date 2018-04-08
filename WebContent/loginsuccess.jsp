@@ -19,29 +19,28 @@
     double rate = 0.0;
     double expenses = 0.0;
     double netIncome = 0.0;
+    double annualSavings  = 0.0;
     
     Statement st = conn.createStatement();
-    ResultSet rs = st.executeQuery("SELECT name, state, salary from User where username='" + username + "';");
+    ResultSet rs = st.executeQuery("SELECT U.name, U.state, U.salary, B.expenses from User U, Budget B where U.username = B.username and U.username='" + username + "';");
     while(rs.next()){
     	name = (String)rs.getString("name");
     	state = (String)rs.getString("state");
     	salary = rs.getDouble("salary");
+    	expenses = rs.getDouble("expenses");
     }
     ResultSet rsTaxRate = st.executeQuery("SELECT rate from TaxData where state='" + state + "';");
     while(rsTaxRate.next())
     {
     	rate = rsTaxRate.getDouble("rate");
     }
-    ResultSet rsExp = st.executeQuery("SELECT expenses from Budget where username='" + username + "';");
-    while(rsExp.next())
-    {
-    	expenses = rsExp.getDouble("expenses");
-    }
     
-    netIncome = salary - (salary * rate) - expenses;  
+    netIncome = salary - (salary * rate);
+    annualSavings =  netIncome - expenses;
     BigDecimal bd = new BigDecimal(Double.toString(netIncome));
     bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);		//rounds to two decimal places
     netIncome = bd.doubleValue();
+    annualSavings = bd.doubleValue();
     %>
 	<div class="mainBox">
 		<form method="post" action="adjuster.jsp">
@@ -53,6 +52,9 @@
 					<div class="whitespace"></div>
 					<h3>$<%=netIncome%></h3>
 					<h4>Estimated Annual Net Income</h4>
+					
+					<h3>$<%=annualSavings%></h3>
+					<h4>Annual Savings</h4>
 					<div class="whitespace"></div>
 					<h3><%=state%></h3>
 					<h4>Current State</h4>
