@@ -40,7 +40,6 @@
     BigDecimal bd = new BigDecimal(Double.toString(netIncome));
     bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);		//rounds to two decimal places
     netIncome = bd.doubleValue();
-    annualSavings = bd.doubleValue();
     %>
 	<div class="mainBox">
 		<form method="post" action="adjuster.jsp">
