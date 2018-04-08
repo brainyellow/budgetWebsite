@@ -38,8 +38,11 @@
     netIncome = salary - (salary * rate);
     annualSavings =  netIncome - expenses;
     BigDecimal bd = new BigDecimal(Double.toString(netIncome));
+    BigDecimal ba = new BigDecimal(Double.toString(annualSavings));
+	ba = ba.setScale(2, BigDecimal.ROUND_HALF_UP);		//rounds to two decimal places
     bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);		//rounds to two decimal places
     netIncome = bd.doubleValue();
+    annualSavings = ba.doubleValue();
     %>
     
 	<div class="mainBox">
