@@ -51,6 +51,7 @@
 					<div class="whitespace"></div>
 					<h3>$<%=netIncome%></h3>
 					<h4>Estimated Annual Net Income</h4>
+					<br>
 					
 					<h3>$<%=annualSavings%></h3>
 					<h4>Annual Savings</h4>
