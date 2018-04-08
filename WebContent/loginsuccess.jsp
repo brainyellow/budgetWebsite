@@ -10,53 +10,57 @@
 	
 	<%
 	Class.forName("com.mysql.jdbc.Driver");
-    Connection conn = DriverManager.getConnection("jdbc:mysql://cs336-spr18.chigwigvjel3.us-east-2.rds.amazonaws.com:3306/IncomeTax", "maziz", "mark1995++");
+    Connection conn = DriverManager.getConnection("jdbc:mysql://budgetwebsite.cthtpprfbxoo.us-east-2.rds.amazonaws.com:3306/IncomeTax", "admin", "adminadmin");
 
     String username = (String) session.getAttribute("username");
     String name = null;
     String state= null;
     double salary = 0.0;
     double rate = 0.0;
+    double expenses = 0.0;
+    double netIncome = 0.0;
     
     Statement st = conn.createStatement();
     ResultSet rs = st.executeQuery("SELECT name, state, salary from User where username='" + username + "';");
     while(rs.next()){
     	name = (String)rs.getString("name");
     	state = (String)rs.getString("state");
-    	salary = (double)rs.getFloat("salary");
+    	salary = rs.getDouble("salary");
     }
-    ResultSet rsrate = st.executeQuery("SELECT rate from TaxData where state='" + state + "';");
-    while(rsrate.next())
+    ResultSet rsTaxRate = st.executeQuery("SELECT rate from TaxData where state='" + state + "';");
+    while(rsTaxRate.next())
     {
-    	rate = (double)rsrate.getFloat("rate");
+    	rate = rsTaxRate.getDouble("rate");
+    }
+    ResultSet rsExp = st.executeQuery("SELECT expenses from Budget where username='" + username + "';");
+    while(rsExp.next())
+    {
+    	expenses = rsExp.getDouble("expenses");
     }
     
-    double eni = salary - (salary * rate);  
-    BigDecimal bd = new BigDecimal(Double.toString(eni));
-    bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);
-    eni = bd.doubleValue();
+    netIncome = salary - (salary * rate) - expenses;  
+    BigDecimal bd = new BigDecimal(Double.toString(netIncome));
+    bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);		//rounds to two decimal places
+    netIncome = bd.doubleValue();
     %>
 	<div class="mainBox">
 		<form method="post" action="adjuster.jsp">
-		<h4>Welcome, <%=name%></h4>
-		
-		
-		
-		
-		
+			<h4>Welcome, <%=name%></h4>
+			
 			<div align = "center">
 				<div class="main_info">
 					<h1>net income</h1>
 					<div class="whitespace"></div>
-					<h3>$<%=eni%></h3>
-					<h4>Estimated Net Income</h4>
+					<h3>$<%=netIncome%></h3>
+					<h4>Estimated Annual Net Income</h4>
 					<div class="whitespace"></div>
 					<h3><%=state%></h3>
-					<h4>State</h4>
+					<h4>Current State</h4>
 				</div>
 			</div>
+			
 			<div class="h_line"></div>
-                       <h3>adjust info</h3>
+                 <h3 style = "font-size: 26px">adjust your information</h3>
                        <p>State</p>
                       	 <select  name="state" size="1" required>
                       	 	<option value=""> Select State </option>
@@ -111,12 +115,12 @@
 							<option value="Wisconsin">Wisconsin</option>
 							<option value="Wyoming">Wyoming</option>
 						</select>
-                       <p>Estimated Salary</p>
-                       <input type="number" name="salary" onfocus="this.value=''" value="" required/>
-                       <p>Estimated Annual Expenses</p>
-                       <input type="number" name="expenses" onfocus="this.value=''" value="" required/>
-                   	<input type="submit" value="Submit Changes"/>
-                   	<p align=right><a href='logout.jsp'>Logout</a></p>
+                      	<p>Estimated Annual Salary</p>
+                      	<input type="number" name="salary" onfocus="this.value=''" value="" required/>
+                       	<p>Estimated Annual Expenses</p>
+                       	<input type="number" name="expenses" onfocus="this.value=''" value="" required/>
+                   		<input type="submit" value="Submit Changes"/>
+                   		<p align=right><a style = "color: #D0D0D0" href='logout.jsp'>Logout</a></p>
       	</form>
       	</div>
 	</body>

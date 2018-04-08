@@ -71,7 +71,7 @@
 							<option value="Wisconsin">Wisconsin</option>
 							<option value="Wyoming">Wyoming</option>
 						</select>
-                       <p>Estimated Gross Salary</p>
+                       <p>Estimated Annual Gross Salary</p>
                        <input type="number" name="salary" onfocus="this.value=''" value="" required/>
                        <p>Estimated Annual Expenses</p>
                        <input type="number" name="expenses" onfocus="this.value=''" value="" required/>

@@ -58,6 +58,7 @@ body
     padding: 0;
 }
 
+
 h3 
 {
 	color: #ffffff;
@@ -93,6 +94,7 @@ h4
 	box-sizing: border-box;
 	padding: 25px;
 	border-radius: 10px;
+	padding-top: 25px;
 }
 
 .mainBox p
@@ -167,4 +169,9 @@ h4
 	font-size: 12px;
 	color: #000;
 	text-decoration: none;
+}
+
+option
+{
+	background-color: #82caff;
 }
