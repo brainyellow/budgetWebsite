@@ -1,0 +1,170 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	font-color: #ffffff;
+	background: url(bbbb.jpg);
+}
+
+.main_info .whitespace{
+	margin: 20px;
+}
+
+.whitespace{
+	margin: 40px;
+}
+
+.main_info h1
+{
+	color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-size: 24pt;
+	font-variant: small-caps;
+	margin-bottom: 40px;
+}
+	
+
+.main_info h3
+{
+	color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 32pt;
+	margin: 0;
+	text-align: left;
+	padding: 0px 0 0px 0;
+	font-weight: normal;
+}
+
+.main_info h4
+{
+	color: #bfbfbf;
+	font-size: 10pt;
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: left;
+	padding: 0px 0 0px 0;
+	font-weight: bold;
+}
+
+.h_line 
+{
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2em 0 1em 0;
+    padding: 0;
+}
+
+h3 
+{
+	color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14pt;
+	margin: 0;
+	text-align: center;
+	padding: 5px 0 30px 0;
+	font-weight: normal;
+	font-variant: small-caps;
+}
+
+h4 
+{
+	color: #bfbfbf;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12pt;
+	margin: 0;
+	text-align: left;
+	padding: 0px 0 0px 0;
+}
+
+.mainBox
+{
+	margin: 0 auto;
+	width: 500px;
+	height: 725px;
+	background: rgba(0, 0, 0, .65);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 25px;
+	border-radius: 10px;
+}
+
+.mainBox p
+{
+	color: #cecece;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.mainBox input
+{
+	width: 100%;
+	margin-bottom: 20px
+}
+
+.smallBox
+{
+	margin: 0 auto;
+	width: 300px;
+	height: 200px;
+	background: rgba(0, 0, 0, .45);
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 25px;
+	border-radius: 10px;
+}
+
+.smallBox a
+{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	padding: 20px;
+}
+
+
+.mainBox input[type="text"], input[type="password"], input[type="number"], input[type="submit"]
+{
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	background: transparent;
+	outline: none;
+	height: 18px;
+	font-size: 14px;
+	color: #ffffff;
+	width: 70%;
+}
+
+.mainBox input[type="submit"]
+{
+	margin: 10px; 
+	height: 35px;
+	background: #38acff;
+	color: #ffffff;
+	border: none;
+	box-shadow: 0 3px 8px #404040;
+	font-weight: bold;
+	border-radius: 5px;
+	width: 30%;
+	float: left;
+	
+}
+
+.mainBox a
+{
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+}

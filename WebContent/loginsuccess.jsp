@@ -4,8 +4,10 @@
 <html>
 	<head>
 		<title>Budget Website</title>	
+		<link rel="stylesheet" href="mainpageStyle.css">
 	</head>
 	<body style="font-family: helvetica;">
+	
 	<%
 	Class.forName("com.mysql.jdbc.Driver");
     Connection conn = DriverManager.getConnection("jdbc:mysql://cs336-spr18.chigwigvjel3.us-east-2.rds.amazonaws.com:3306/IncomeTax", "maziz", "mark1995++");
@@ -34,30 +36,28 @@
     bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);
     eni = bd.doubleValue();
     %>
-	
+	<div class="mainBox">
 		<form method="post" action="adjuster.jsp">
-		Welcome to Main Page, <%=name%>
-		<p align="right"><a href='logout.jsp'>Logout</a> </p>
+		<h4>Welcome, <%=name%></h4>
 		
 		
-		<br/><br/><br/>
+		
 		
 		
 			<div align = "center">
-				<h1>Salary and Tax Calculator</h1>
-				<h2>Estimated Net Income: <%=eni%> </h2>
-				<h2>Current State: <%=state%> </h2>
+				<div class="main_info">
+					<h1>net income</h1>
+					<div class="whitespace"></div>
+					<h3>$<%=eni%></h3>
+					<h4>Estimated Net Income</h4>
+					<div class="whitespace"></div>
+					<h3><%=state%></h3>
+					<h4>State</h4>
+				</div>
 			</div>
-            <table align = "center" border="0" width="0%" cellpadding="2">
-               <thead>
-                   <tr>
-                       <th colspan="2">Adjust your information here</th>
-                   </tr>
-               </thead>
-               <tbody>
-                   <tr>
-                       <td>State</td>
-                       <td>
+			<div class="h_line"></div>
+                       <h3>adjust info</h3>
+                       <p>State</p>
                       	 <select  name="state" size="1" required>
                       	 	<option value=""> Select State </option>
 							<option value="Alabama">Alabama</option>
@@ -111,21 +111,13 @@
 							<option value="Wisconsin">Wisconsin</option>
 							<option value="Wyoming">Wyoming</option>
 						</select>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>Estimated Gross Salary</td>
-                       <td><input type="number" name="salary" onfocus="this.value=''" value="" required/></td>
-                   </tr>
-                   <tr>
-                       <td>Estimated Annual Expenses</td>
-                       <td><input type="number" name="expenses" onfocus="this.value=''" value="" required/></td>
-                   </tr>
-                   	<td>
-                   		<input type="submit" value="Submit" />
-                   	</td>
-               </tbody>
-           </table>
+                       <p>Estimated Salary</p>
+                       <input type="number" name="salary" onfocus="this.value=''" value="" required/>
+                       <p>Estimated Annual Expenses</p>
+                       <input type="number" name="expenses" onfocus="this.value=''" value="" required/>
+                   	<input type="submit" value="Submit Changes"/>
+                   	<p align=right><a href='logout.jsp'>Logout</a></p>
       	</form>
+      	</div>
 	</body>
 </html>

@@ -19,6 +19,7 @@
 		}
         
     } else {
-        out.println("Invalid password <a href='index.jsp'>try again</a>");
+    	out.println("Login not successful! ");
+    	response.sendRedirect("loginfail.jsp");
     }
 %>
