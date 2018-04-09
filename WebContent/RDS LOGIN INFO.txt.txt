@@ -1,0 +1,3 @@
+RDS Endpoint: budgetwebsite.cthtpprfbxoo.us-east-2.rds.amazonaws.com
+Grader Username: cs336_grader
+Grader Password: password
