@@ -12,7 +12,6 @@ select * from Budget;
 
 CREATE TABLE Budget (budgetid int(10) not null PRIMARY KEY auto_increment,
 expenses float,
-netIncome float,
 username varchar(20) not null,
 foreign key (username) references User (username) ON UPDATE CASCADE);
 
